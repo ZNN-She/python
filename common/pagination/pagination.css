@@ -1,0 +1,74 @@
+@charset "UTF-8";
+.jquery-pagination{
+    font-size: 14px;
+}
+.jquery-pagination,.jquery-pagination1,.jquery-pagination2,.jquery-pagination3,.jquery-pagination4{
+	position: relative;
+    text-align: center;
+  	zoom: 1;
+    margin: 20px 0;
+}
+.jquery-pagination:before,.jquery-pagination:after,.jquery-pagination1:before,.jquery-pagination1:after ,.jquery-pagination2:before,.jquery-pagination2:after ,.jquery-pagination3:before,.jquery-pagination3:after,.jquery-pagination4:before,.jquery-pagination4:after{
+    content:"";
+    display:table;
+}
+.jquery-pagination:after,.jquery-pagination1:after,.jquery-pagination2:after,.jquery-pagination3:after,.jquery-pagination4:after{
+	clear:both;
+	overflow:hidden;
+}
+.jquery-pagination span,.jquery-pagination1 span,.jquery-pagination2 span,.jquery-pagination3 span,.jquery-pagination4 span{
+	margin:0 5px;
+	width: 22px;
+    height: 22px;
+    line-height: 22px;
+    color: #bdbdbd;
+}
+.jquery-pagination .active,.jquery-pagination1 .active,.jquery-pagination2 .active,.jquery-pagination3 .active,.jquery-pagination4 .active{
+	margin:0 5px;
+	width: 22px;
+    height: 22px;
+    line-height: 22px;
+    color: #03888f;
+}
+.jquery-pagination a,.jquery-pagination1 a,.jquery-pagination2 a,.jquery-pagination3 a,.jquery-pagination4 a{
+    margin: 0 5px;
+    min-width: 20px;
+    line-height: 20px;
+    background: #fff;
+    color: #bdbdbd;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+}
+.jquery-pagination a:hover,.jquery-pagination1 a:hover,.jquery-pagination2 a:hover,.jquery-pagination3 a:hover,.jquery-pagination4 a:hover{
+    background: #e4e7ea;
+}
+.jquery-pagination .next,.jquery-pagination .prev,.jquery-pagination1 .next,.jquery-pagination1 .prev{
+	font-family: "Simsun";
+    color: #03888f;
+    width: initial;
+}
+.jquery-pagination .now,.jquery-pagination .count{
+	padding:0 5px;
+	color:#f00;
+}
+.jquery-pagination .eg img{
+	max-width: 800px;
+	min-height: 500px;
+}
+.jquery-pagination input{
+    margin: 0 5px;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #fff;
+    outline: none;
+    color: #bdbdbd;
+}
+.jquery-pagination .jump-ipt{
+    border: 1px solid #bdbdbd;
+}
+.jquery-pagination .jump-btn{
+
+}

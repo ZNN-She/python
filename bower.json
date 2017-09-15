@@ -1,0 +1,23 @@
+{
+  "name": "python",
+  "authors": [
+    "nanning_zhang <nanning.zhang@benjiwang.com>"
+  ],
+  "description": "kk",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "vue": "^2.4.2"
+  }
+}
