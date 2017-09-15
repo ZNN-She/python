@@ -9,7 +9,7 @@ var REQUIRY_CONFIG = {
 
         /* project common */
         "modal": "../common/modal/modal",
-        "loading": "../common/loading/loading",
+        "loading": "../common/loading/loading-0.1.0",
         "pagination": "../common/pagination/jquery.pagination",
 
         /* script common */
