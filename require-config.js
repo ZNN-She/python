@@ -53,8 +53,8 @@ window.USER_INFO = {};
 require(["require", "jquery"], function(require, $, ) {
     //获取当前页面html的名字
     var htmlName = "index"; //默认加载index.js
-    var pathname = location.pathname;
-    htmlName = pathname == "/" ? htmlName : pathname.split("/").pop().split(".").shift();
+    var pathname = location.pathname.split("/").pop().split(".").shift();
+    htmlName = pathname == "" ? htmlName : pathname;
     //判断是否存在对应模块
     console.log(htmlName);
     if (String(REQUIRY_CONFIG.paths[htmlName]) == "undefined") {
