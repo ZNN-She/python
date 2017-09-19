@@ -24,7 +24,9 @@
         var self = this;
 
         self.$ele.append(self.option.maskEle);
-        self.$ele.css("position", "relative");
+        if (!(self.$ele[0].tagName == "BODY")){
+            self.$ele.css("position", "relative");
+        }
 
         $.when(self.promise).then(
             function() {
