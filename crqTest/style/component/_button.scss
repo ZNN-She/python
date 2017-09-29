@@ -1,0 +1,53 @@
+.btn{
+	display: inline-block;
+	padding: 4px 12px;
+	font-size: 16px;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+	border: 1px solid transparent;
+}
+.btn .caret{
+	margin-left: 0px;
+}
+.caret{
+	display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-top: 6px dashed;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    margin-left: 2px;
+}
+.btn_default {
+	color: #333;
+	background-color: #dddddd;
+	border-color: #ccc;
+}
+.btn_primary{
+	color: #fff;
+	background-color: #0388ff;
+	border-color: #01A6E6;
+	&:hover{
+		background: #337ab7;
+	}
+}
+.btn_warning{
+	color: #fff;
+	background-color: #FF6D00;
+	border-color: #FF6D00;
+}
+.btn_select {
+	color: #01A6E6;
+	background-color: #fff;
+	border-color: #01A6E6;
+}
+button[disabled]{
+	cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+}

@@ -1,0 +1,72 @@
+
+//colors
+$blue-base:               #3585f2;
+$blue-light:              #3cbff3;
+$blue-lightest:           #98b4dc;
+$blue-hover:              #3585D5;
+
+$gray-base:               #444444;
+$gray-light:              #666666;
+$gray-lightest:           #999999;
+
+$legend-num-lesser:		    #eeeeee;
+$legend-num-less:		      #ffbaa0;
+$legend-num-info:		      #fd7c67;
+$legend-num-more:		      #f25b4a;
+$legend-num-moreer:		    #8c231f;
+
+$red-base:                #ff0000;
+$ren-light:               #da3b28;
+$red-lightest:            #eb5c4e;
+
+$yellow-base:             #e18d37;
+$yellow-light:            #efa574;
+$yellow-lightest:         #ffb888;
+
+$green-base:              #01B995;
+$green-light:             #3abe20;
+$green-lightest:          #54b661;
+
+$white-base:              #ffffff;
+
+$color-base:             #00a7e6;
+$color-primary:          #3C93CE;
+$color-success:          #3abe20;
+$color-info:             #3cbff3;
+$color-warning:          #efa574;
+$color-danger:           #da3b28;
+$color-disable:          #999999;
+
+$bg-color-base:          $color-base;
+$bg-color-fill:          #ebf0ef;
+$border-color-base:      #ddd;
+$text-color-base:        #333;
+
+$font-size-base:          16px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+//line-height
+$line-height-base:        1.25; // 20/16
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+//z-index
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-navbar-fixed:      1030 !default;
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+
+//link
+$link-color:            #0388ff;
+$link-hover-color:      darken($link-color, 15%);
+$link-hover-decoration: none;
+
+/* alert */
+$alert-fixed-index:1060;
+
+/*bg-color*/
+$bg-color-orange:          #FF6D00;
+$text-orange:   #FF6D00;

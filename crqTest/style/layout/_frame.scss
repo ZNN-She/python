@@ -1,0 +1,84 @@
+body {
+  min-height: 100%;
+  background: #edf1f5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body>.frame *{
+  //box-sizing: border-box;
+}
+
+body>.frame {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 190px;
+  box-sizing: border-box;
+}
+
+body>.frame>.header {
+  height: 90px;
+  width: 100%;
+  z-index: 10000;
+}
+
+body>.frame>.body {
+  position: relative;
+  min-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  background: #edf1f5 url(../image/sidebar-bg.png) repeat-y;
+  &>.container-fluid{
+    width: 90%;
+    position: relative;
+    &:before,
+    &:after {
+      content: " "; // 1
+      display: table; // 2
+    }
+    &:after {
+      clear: both;
+    }
+  }
+  &.body_margin_top{
+    margin-top: 35px;
+  }
+}
+
+body>.frame>.body .sidebar {
+  width: 180px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body>.frame>.body .main {
+  //padding: 0 15px;
+  margin-left: 195px;
+  min-height: 100%;
+  box-sizing: border-box;
+  &>*{
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #fff;
+  }
+}
+
+body>.frame>.footer {
+  height: 100px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body>.frame>.smart-ui-bar {
+  bottom: 130px;
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin-right: 20px;
+}

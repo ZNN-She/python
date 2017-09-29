@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="查人气(charenqi.com)-查排名 天猫 直通车 淘宝等店铺排名、宝贝关键词排名在线查询,提供准确的排名查询、店铺数据监控和行业分析服务"/>
+    <meta name="keywords" content="查人气，查排名,淘宝关键词排名查询,淘宝宝贝排名查询,卖家工具箱,淘宝关键词优化,直通车优化,宝贝监控，店铺监控，同行分析，收藏加购，竞品分析"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <title>查人气-天猫 直通车 淘宝 宝贝关键词排名查询 手淘排名查询</title>
+    <link rel="stylesheet" href="../../../style/charenqi.css">
+</head>
+<body>
+<div class="frame">
+    <div data-header="header"></div>
+    <div class="body sku-page" id="sku-page">
+        <div class="nav nav-border-top">
+            <div class="nav-item" :class="{'active':navType == 'search'}" v-on:click="switchNavType('search')">SKU销售统计</div>
+            <div class="nav-item" :class="{'active':navType == 'stat'}" v-on:click="switchNavType('stat')">查询记录</div>
+            <div class="nav-item" :class="{'active':navType == 'case'}" v-on:click="switchNavType('case')">查看案例</div>
+        </div>
+        <div class="search-content" v-if="navType == 'search'">
+            <div class="hint-module hint-module-warning">
+                <div class="inner">
+                    <div class="hint-module-item">
+                        <span class="glyphicon glyphicon-cog"></span>
+                        <div class="hint-module-text">
+                            功能说明：从此款单品已生效的评价中抓取每条交易记录的购买规格，从而统计个
+                            <span class="text_danger">SKU销售占比</span>，以及<span class="text_danger">买家喜好度最高</span>的SKU,
+                            为商家备货提供更准确的数据支持
+                        </div>
+                    </div>
+                    <div class="hint-module-item">
+                        <span class="hint-warning-icon"></span>
+                        <div class="hint-module-text">
+                            注意事项：1.请在提交查询成功<span class="text_danger">一小时后</span>来查看此分析数据；
+                            2.此功能查询结果只<span class="text_danger">保留七天</span>，请商家技师查看
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-form">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-lg-2">宝贝链接ID：</label>
+                        <div class="col-lg-10">
+                            <div class="input-group input-group-lg input-group-blue">
+                                <input type="text" class="form-control" placeholder="请输入宝贝链接或ID" aria-describedby="basic-addon2">
+                                <span class="input-group-addon" id="basic-addon2">开始统计</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-list">
+                <div class="nav-title">
+                    <span class="nav-title-inner">最近查询</span>
+                    <span class="pull_right text_primary link">查看更多></span>
+                </div>
+                <div class="item-list">
+                    <table class="table table-center table-middle">
+                        <thead>
+                        <tr>
+                            <th>商品</th>
+                            <th>店铺</th>
+                            <th>数据统计时间</th>
+                            <th>查询状态</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="list-item">
+                                    <img class="item-img" src="http://gju2.alicdn.com/bao/uploaded/i4/3075970470/TB2fBfjd93PL1JjSZPcXXcQgpXa_!!0-juitemmedia.jpg_Q90.jpg"
+                                         alt="">
+                                    <div class="item-info">
+                                        【自选5条=29.9】日系高腰蕾丝内裤【自选5条=29.9】日系高腰蕾丝内裤
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                旗舰店
+                            </td>
+                            <td>2017-08-23 12:12:21</td>
+                            <td>统计中，预计一小时内完成</td>
+                            <td>
+                                <span class="text_primary link">查看详情</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">
+                                <div class="text_disable font_size_22" style="margin-top:50px;margin-bottom: 150px;">暂无数据</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="sta-content" v-if="navType == 'stat'">
+            <div class="item-list">
+                <table class="table table-center table-middle">
+                    <thead>
+                    <tr>
+                        <th>商品</th>
+                        <th>店铺</th>
+                        <th>数据统计时间</th>
+                        <th>查询状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="list-item">
+                                <img class="item-img" src="http://gju2.alicdn.com/bao/uploaded/i4/3075970470/TB2fBfjd93PL1JjSZPcXXcQgpXa_!!0-juitemmedia.jpg_Q90.jpg"
+                                     alt="">
+                                <div class="item-info">
+                                    【自选5条=29.9】日系高腰蕾丝内裤【自选5条=29.9】日系高腰蕾丝内裤
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            旗舰店
+                        </td>
+                        <td>2017-08-23 12:12:21</td>
+                        <td>统计中，预计一小时内完成</td>
+                        <td>
+                            <span class="text_primary link">查看详情</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <div class="text_disable font_size_22" style="margin-top:50px;margin-bottom: 150px;">暂无数据</div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="case-method" v-if="navType == 'case'">
+            <img style="display: block;" src="/image/sku/sku_case1.jpg" alt="">
+            <img style="display: block;" src="/image/sku/sku_case2.jpg" alt="">
+            <img style="display: block;" src="/image/sku/sku_case3.jpg" alt="">
+        </div>
+        <div class="instructions" v-if="navType != 'case'">
+            <div class="show-instructions-btn" v-on:click="instructionsBtnClick()">
+                <img class="show-btn-icon" v-if="!isShowInstructions" src="/image/cpm_bottom.png" alt="">
+                <img class="show-btn-icon" v-if="isShowInstructions" src="/image/cpm_top.png" alt="">
+                <span>展开使用说明</span>
+            </div>
+            <div v-cloak class="instructions-content" v-if="isShowInstructions">
+                <div class="content-item">
+                    <h3>sku销售统计</h3>
+                    <p>我们从此款单品已生效的评价中抓取每条交易记录的购买规格，从而统计各<span class="text_danger">SKU销售占比</span>，以及<span class="text_danger">买家喜好度最高</span>的SKU，为商家备货提供更准确的数据支持</p>
+                </div>
+                <div class="content-item">
+                    <h3>sku是什么？</h3>
+                    <p>sku是淘宝产品的一个规格，比如服装行业：有颜色、尺码、款式等等，那么对于这些类目的商家来说，如何能分析出买家在这些sku里面到底钟爱哪一种？这个就是我们所需要去分析的事情。分析sku的主要目的是为了了解大部分买家的喜好度，这样您可以从这么多sku里面选出一个，重点击破重点打造。了解自身产品的优势是非常有必要的，包括做活动都对您的宝贝有所帮助。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-footer="footer"></div>
+</div>
+<script data-main="/require-config.js" src="/lib/require/require.js"></script>
+</body>
+</html>

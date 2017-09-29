@@ -1,0 +1,167 @@
+.header {}
+
+.header .header_inner {}
+
+.header .header_inner .header_top {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #999;
+    background: #fff;
+    padding: 0 10px;
+}
+
+.header .header_inner .header_top>a:hover {
+    color: #337cdf;
+    text-decoration: underline;
+}
+
+.header .header_inner .header_top .header_top_left {
+    float: left;
+}
+
+.header .header_inner .header_top .header_top_left>span {
+    color: #337cdf;
+}
+
+.header .header_inner .header_top .header_top_left>span>a {
+    color: #999;
+}
+
+.header .header_inner .header_top .header_top_right {
+    float: right;
+}
+
+.header .header_inner .header_top .header_top_right>span {
+    color: #666666;
+}
+
+.header .header_inner .header_top .header_top_right>span>a {
+    color: #999;
+}
+
+.header .header_inner .header_nav {
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background: #0387ff;
+}
+
+.header .header_inner .header_nav .header_nav_inner {
+    display: inline-block;
+}
+
+.header .header_inner .header_nav .header_nav_inner .logo_wrap {
+    float: left;
+    margin-right: 10px;
+}
+
+.header .header_inner .header_nav .header_nav_inner .logo_wrap img {
+    display: inline-block;
+    width: 170px;
+    vertical-align: middle;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar {
+    float: left;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ui {
+    display: block;
+    list-style-type: disc;
+    padding: 0;
+    margin: 0;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li {
+    float: left;
+    position: relative;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li .new_icon {
+    background-image: url("/image/new_action_icon.png");
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    top: -35px;
+    left: 10px;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li.active {
+    background: #007be6;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li:hover {
+    background: #007be6;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li>a {
+    color: #fff;
+    padding: 0 15px;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li>a:hover {
+    text-decoration: none;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li>ul {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li>ul>li {
+    height: 36px;
+    background-color: #007be5;
+    text-align: center;
+    line-height: 36px;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li>ul>li a {
+    color: white;
+    font-size: 16px;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li>.pattern {
+    width: 200%;
+    height: 180px;
+    background-color: #007be5;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li>.pattern>li:nth-child(1) {
+    float: left;
+    padding-left: 8px;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li>.pattern>li:nth-child(2) {
+    float: right;
+    text-align: left;
+    padding-right: 8px;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li>.pattern>li>ul>li {
+    height: 36px;
+    line-height: 36px;
+    background-color: #007be5;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li>.pattern>li>ul>li:hover {
+    background-color: #048bfe;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li>.pattern>li>ul>li>a:hover {
+    text-decoration: none;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li>ul>li:hover {
+    background-color: #048bfe;
+}
+
+.header .header_inner .header_nav .header_nav_inner .header_nav_bar>ul>li>ul>li>a:hover {
+    text-decoration: none;
+}
