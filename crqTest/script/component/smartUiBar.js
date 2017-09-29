@@ -5,7 +5,7 @@ define([],function () {
     // 获取生成模板
     function getTemplate() {
         var dtd = $.Deferred();
-        return $.get("/view/component/smartUiBar.html", function(template) {
+        return $.get("./view/component/smartUiBar.html", function(template) {
             $("[data-smartUiBar='smartUiBar']").replaceWith(template)
             dtd.resolve()
         });

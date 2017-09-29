@@ -5,7 +5,7 @@ define([], function () {
     // 获取、添加模板
     function getTemplate() {
         var dtd= $.Deferred();
-        $.get("view/component/header.html", function(result) {
+        $.get("./view/component/header.html", function(result) {
             $("[data-header='header']").replaceWith(result);
             dtd.resolve();
         });

@@ -4,7 +4,7 @@
 define([],function(){
     // 获取生成模板
     function getTemplate() {
-        return $.get("view/component/footer.html", function(template) {
+        return $.get("./view/component/footer.html", function(template) {
             $("[data-footer='footer']").replaceWith(template)
         });
     }
