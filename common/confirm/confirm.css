@@ -1,0 +1,167 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(3, 3, 3, 0.3);
+  z-index: 1000;
+}
+.modal.modal-open{
+  display: block;
+}
+
+.modal-dialog {
+  background: #fff;
+  width: 600px;
+  max-height:80%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 15% auto;
+  border: 1px solid #ddd;
+  box-shadow: 0px 1px 1px 1px #ddd;
+  border-radius: 5px;
+}
+
+.modal-content {}
+
+.modal-header {
+  height: 50px;
+  padding: 0 10px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.modal-header .close {
+  border: 0;
+  background: #fff;
+  margin-top: 12px;
+  color: #ddd;
+  font-size: 20px;
+  float: right;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-header .modal-title {
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.modal-body {
+  padding: 10px;
+}
+
+.modal-footer {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.modal-footer .btn {
+  border: 0;
+  font-size: 14px;
+  line-height: 30px;
+  border-radius: 3px;
+  padding: 0 15px;
+}
+
+.modal-footer .btn.btn-close {}
+
+.modal-footer .btn.btn-save {
+  color: #fff;
+  background: #337ab7;
+}
+
+.confirm {
+  .modal-dialog {
+    width: 380px;
+    margin-top: 35%;
+    &.modal-lg {
+      width: 550px;
+    }
+  }
+  .modal-header {
+    height: 40px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    .modal-title {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .close {
+      border: 0;
+      background: #fff;
+      margin-top: -5px;
+      color: #ddd;
+      font-size: 20px;
+      float: right;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+  .modal-body {
+    padding: 40px 50px 30px 50px
+  }
+  .modal-footer {
+    .btn {
+      min-width: 70px;
+      .btn-close{
+
+      }
+      .btn-cancel{
+
+      }
+    }
+  }
+  .confirm-icon {
+    margin-bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background: $blue-base;
+    border-radius: 50%;
+    float: left;
+    text-align: center;
+    /*img {
+      max-width: 100%;
+      max-height: 60px;
+      vertical-align: middle;
+    }*/
+    &.default-icon {
+      background: $blue-base;
+    }
+    &.success-icon {
+      background: $blue-base;
+    }
+    &.error-icon {
+      background: $red-lightest;
+    }
+    .glyphicon {
+      color: #fff;
+      font-size: 30px;
+      font-weight: 100;
+      line-height: 60px;
+    }
+  }
+  .confirm-content {
+    padding-left: 70px;
+    color: #999;
+    .confirm-title {
+      color: #333;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 0;
+      margin-top: 0;
+      margin-bottom: 7px;
+    }
+    p {
+      margin: 0 0 5px;
+    }
+    ul, ol {
+      margin-bottom: 5px;
+    }
+  }
+}

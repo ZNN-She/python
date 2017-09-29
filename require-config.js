@@ -8,12 +8,13 @@ var REQUIRY_CONFIG = {
         "Vue": "../lib/vue/dist/vue",
 
         /* project common */
-        "modal": "../common/modal/modal",
+        "alert": "../common/alert/alert",
+        "confirm": "../common/confirm/confirm",
+        "modal": "../common/modal/modal-0.1.0",
         "loading": "../common/loading/loading-0.1.0",
         "pagination": "../common/pagination/jquery.pagination",
 
         /* script common */
-        "$alert": "common/alert",
         "$tool": "common/tool",
         "$http": "common/http",
         "$commonData": "common/commonData",
@@ -28,7 +29,7 @@ var REQUIRY_CONFIG = {
     },
     shim: {
         "$http": {
-            deps: ["jquery", "$alert"]
+            deps: ["jquery", "alert"]
         },
         "footer": {
             deps: ["jquery"]

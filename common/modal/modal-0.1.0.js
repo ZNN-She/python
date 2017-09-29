@@ -1,7 +1,7 @@
 /**
- * Created by SNAKE on 2017/6/19.
+ * Created by SNAKE on 2017/9/27.
  */
-(function($) {
+(function ($) {
     // 当前文件路径
     var BASE_PATH = "";
     var CSS_PATH = "";
@@ -14,52 +14,58 @@
 
         this.init();
     }
+
     Modal.DEFAULTS = {
-        backdrop:false,
+        show: true,
+        marginTop: 100, //定位模态框距离顶部的距离
+        backdrop: true, //点击遮罩是否关闭模态框
         closeFn: null,
         dismissFn: null
     };
-    Modal.prototype.init = function() {
+    Modal.prototype.init = function () {
         var self = this;
-        self.$ele.on("click", '[data-dismiss="modal"]', function(event) {
+        self.$ele.on("click", '[data-dismiss="modal"]', function (event) {
             self.dismiss();
             event.stopPropagation(); //阻止冒泡
         });
-        self.$ele.on("click", '[data-close="modal"]', function() {
+        self.$ele.on("click", '[data-close="modal"]', function () {
             self.close();
             return false; //阻止冒泡
         });
-        self.$ele.on("click", function(){
+        self.$ele.on("click", function () {
             self.options.backdrop && $(event.target).is(".modal") && self.dismiss();
         });
     };
-    Modal.prototype.open = function() {
+    Modal.prototype.open = function () {
         var self = this;
         self.$ele.addClass('modal-open');
     };
-    Modal.prototype.close = function() {
+    Modal.prototype.close = function () {
         var self = this;
         self.closeFn && self.closeFn.call(self, self);
         self.hide();
     };
-    Modal.prototype.dismiss = function() {
+    Modal.prototype.dismiss = function () {
         var self = this;
         self.dismissFn && self.dismissFn.call(self, self);
         self.hide();
     };
-    Modal.prototype.hide = function() {
+    Modal.prototype.hide = function () {
         var self = this;
         self.$ele.removeClass('modal-open');
     };
 
     function Plugin(option) {
-        return this.each(function() {
+        return this.each(function () {
             var $this = $(this);
             var data = $this.data("snake.modal");
             var options = $.extend(true, $.extend(Modal.DEFAULTS), $this.data(), typeof option == "object" && option);
 
+            $(this).find(".modal-dialog").css("margin-top", option.marginTop + "px");
+
             if (!data) $this.data("snake.modal", (data = new Modal(this, options)));
             if (typeof option == "string") data[option]();
+            else if (options.show) data.open();
         });
     }
 
@@ -75,16 +81,20 @@
         head.appendChild(style); //把创建的style元素插入到head中
     }
 
-    function _getCssPath(){
-        $(document.scripts).each(function(index, el) {
-            if(el.src.indexOf("modal.js") > -1){
+    function _getCssPath() {
+        $(document.scripts).each(function (index, el) {
+            if (el.src.indexOf("modal-0.1.0.js") > -1) {
                 BASE_PATH = el.src;
-                CSS_PATH = el.src.replace("modal.js","modal.css");
+                CSS_PATH = el.src.replace("modal-0.1.0.js", "modal.css");
+            }else if (el.src.indexOf("modal.js") > -1) {
+                BASE_PATH = el.src;
+                CSS_PATH = el.src.replace("modal.js", "modal-0.1.0.css");
             }
         });
     }
 
     function _init() {
+        //自动加载样式
         _getCssPath();
         _addStyle();
     }
@@ -98,13 +108,13 @@
 
     // DROPDOWN NO CONFLICT
     // ====================
-    $.fn.modal.noConflict = function() {
-        $.fn.dropdown = old
+    $.fn.modal.noConflict = function () {
+        $.fn.dropdown = old;
         return this
     };
 
-    $(window).on("load", function() {
-        return $("[data-snake='modal']").each(function() {
+    $(window).on("load", function () {
+        return $("[data-snake='modal']").each(function () {
             Plugin.call($(this), $(this).data());
         });
     });

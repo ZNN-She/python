@@ -80,11 +80,18 @@ define([], function() {
      */
     function needGlobalResolve(data) {
         var sourceCode = ["301"];
+        if (typeof codes == "string" || typeof codes == "number") {
+            sourceCode.indexOf(String(codes)) != -1 && sourceCode.splice(sourceCode.indexOf(String(codes)), 1);
+        } else if (codes instanceof Array) {
+            codes.forEach(function (item) {
+                sourceCode.indexOf(String(item)) != -1 && sourceCode.splice(sourceCode.indexOf(String(item)), 1);
+            });
+        }
         return sourceCode.indexOf(String(data.code)) != -1;
     }
 
     //生成回调
-    function getCallback(options, deferred) {
+    function getCallback(options, codes) {
         var successHandler, errorHandler;
         //创建成功回调
         if (options.custom) {
@@ -93,9 +100,8 @@ define([], function() {
             successHandler = function(data) {
                 if (data.code == 0) {
                     options.successCallback && options.successCallback.call(this, data);
-                } else if (needGlobalResolve(data)) {
+                } else if (needGlobalResolve(data,codes)) {
                     globalResolve(data);
-                    deferred && deferred.resolve();
                 } else { //执行失败回调
                     if (options.failCallback) {
                         options.failCallback && options.failCallback(data);
@@ -107,11 +113,9 @@ define([], function() {
         }
         //创建失败回调
         if (options.errorCallback && typeof options.errorCallback == "function") {
-            deferred && deferred.reject();
             errorHandler = options.errorCallback;
         } else {
             errorHandler = function(xhr, type, errorThrown) {
-                deferred && deferred.reject();
                 $win.alert("请求错误：" + xhr.status + "|" + xhr.statusText, "text");
             }
         }
@@ -123,24 +127,24 @@ define([], function() {
     }
 
     return {
-        get: function(url, param, action, deferred) {
-            var callback = getAction(action, deferred);
+        get: function(url, param, action, codes) {
+            var callback = getAction(action, codes);
             return $.ajax(getOption(url, "get", param, null, callback.success, callback.error));
         },
-        post: function(url, param, data, action, deferred) {
-            var callback = getAction(action, deferred);
+        post: function(url, param, data, action, codes) {
+            var callback = getAction(action, codes);
             return $.ajax(getOption(url, "post", param, data, callback.success, callback.error));
         },
-        put: function(url, param, data, action, deferred) {
-            var callback = getAction(action, deferred);
+        put: function(url, param, data, action, codes) {
+            var callback = getAction(action, codes);
             return $.ajax(getOption(url, "put", param, data, callback.success, callback.error));
         },
-        deletes: function(url, param, data, action, deferred) {
-            var callback = getAction(action, deferred);
+        deletes: function(url, param, data, action, codes) {
+            var callback = getAction(action, codes);
             return $.ajax(getOption(url, "delete", param, data, callback.success, callback.error));
         },
-        postFormData: function(url, param, action, deferred) {
-            var callback = getAction(action, deferred);
+        postFormData: function(url, param, action, codes) {
+            var callback = getAction(action, codes);
             var headers = { 'contentType': 'application/x-www-form-urlencoded' };
             return $.ajax(getOption(url, "post", param, null, callback.success, callback.error, headers));
         }
