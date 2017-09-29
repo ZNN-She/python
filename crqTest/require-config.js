@@ -1,6 +1,6 @@
 //config配置
 var REQUIRY_CONFIG = {
-    baseUrl: "./script/",
+    baseUrl: "./crqTest/script/",
     paths: {
         /* lib */
         "Vue": "../lib/vue/vue",
