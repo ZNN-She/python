@@ -1,16 +1,16 @@
 //config配置
 var REQUIRY_CONFIG = {
-    baseUrl: "./crqTest/script/",
+    baseUrl: "./script/",
     paths: {
         /* lib */
         "Vue": "../lib/vue/vue",
-        "jquery": "/lib/jquery/jquery-3.0.0",
-        "jquery.1.7.2": "/lib/jquery/jquery-1.7.2",
-        "jquery.1.8.3": "/lib/jquery/jquery-1.8.3",
-        "highcharts": "/lib/highcharts/highcharts",
-        "echarts": "/lib/echarts/echarts.min",
-        "laydate": "/lib/laydate/laydate",
-        "swiper": "/lib/swiper",
+        "jquery": "../lib/jquery/jquery-3.0.0",
+        "jquery.1.7.2": "../lib/jquery/jquery-1.7.2",
+        "jquery.1.8.3": "../lib/jquery/jquery-1.8.3",
+        "highcharts": "../lib/highcharts/highcharts",
+        "echarts": "../lib/echarts/echarts.min",
+        "laydate": "../lib/laydate/laydate",
+        "swiper": "../lib/swiper",
 
         /* project common */
         "loading": "../common/loading/loading",
