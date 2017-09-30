@@ -67,7 +67,7 @@ require.config(REQUIRY_CONFIG);
 window.USER_INFO = {};
 
 // 根据路径加载对应的js
-require(["require", "footer", "header", "smartUiBar", "baidu"],
+require(["require", "jquery", "footer", "header", "smartUiBar", "baidu"],
     function(require, $, footer, header, smartUiBar, baidu) {
         //获取当前页面html的名字
         var htmlName = "index"; //默认加载index.js
