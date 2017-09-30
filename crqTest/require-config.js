@@ -48,17 +48,11 @@ var REQUIRY_CONFIG = {
         "baidu": "https://hm.baidu.com/hm.js?96911eef4698192a43f328da2787bfe0"
     },
     shim: {
+        "*": {
+            deps: ["jquery"]
+        },
         "restClient": {
-            deps: ["jquery", "winAlert", "bootstrapExtend"]
-        },
-        "footer": {
-            deps: ["jquery"]
-        },
-        "header": {
-            deps: ["jquery"]
-        },
-        "smartUiBar": {
-            deps: ["jquery"]
+            deps: ["winAlert", "bootstrapExtend"]
         }
     }
 };
@@ -71,7 +65,7 @@ require.config(REQUIRY_CONFIG);
 window.USER_INFO = {};
 
 // 根据路径加载对应的js
-require(["require", "jquery", "footer", "header", "smartUiBar", "baidu"],
+require(["require", "footer", "header", "smartUiBar", "baidu"],
     function(require, $, footer, header, smartUiBar, baidu) {
         //获取当前页面html的名字
         var htmlName = "index"; //默认加载index.js
