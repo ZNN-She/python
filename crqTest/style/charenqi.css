@@ -2086,8 +2086,8 @@ select[multiple], select[size] {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("./../font/glyphicons-halflings-regular.eot");
-  src: url("./../font/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("./../font/glyphicons-halflings-regular.woff2") format("woff2"), url("./../font/glyphicons-halflings-regular.woff") format("woff"), url("./../font/glyphicons-halflings-regular.ttf") format("truetype"), url("./../font/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("./font/glyphicons-halflings-regular.eot");
+  src: url("./font/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("./font/glyphicons-halflings-regular.woff2") format("woff2"), url("./font/glyphicons-halflings-regular.woff") format("woff"), url("./font/glyphicons-halflings-regular.ttf") format("truetype"), url("./font/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 .glyphicon {
   position: relative;
   top: 1px;
@@ -4192,7 +4192,7 @@ label.error:after {
     width: 700px;
     height: 260px;
     padding: 80px 100px 120px;
-    background: url(/image/alert/alert_back.png);
+    background: url(./image/alert/alert_back.png);
     background-size: 100% 100%; }
   .home_page .alert_close {
     position: absolute;
@@ -4284,7 +4284,7 @@ label.error:after {
     height: 130px;
     position: fixed;
     right: 0;
-    background-image: url(/image/fix_banner1.png);
+    background-image: url(./image/fix_banner1.png);
     background-repeat: no-repeat;
     background-position: center 0;
     z-index: 100; }
@@ -4329,7 +4329,7 @@ label.error:after {
     text-align: center; }
   .home_page #one_box {
     height: 760px;
-    background-image: url("/image/trade_home_page/home01.jpg");
+    background-image: url("./image/trade_home_page/home01.jpg");
     background-position: center; }
     .home_page #one_box .nav_bar {
       padding-top: 260px;
