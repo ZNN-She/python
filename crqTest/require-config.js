@@ -75,9 +75,10 @@ require(["require", "jquery", "footer", "header", "smartUiBar", "baidu"],
     function(require, $, footer, header, smartUiBar, baidu) {
         //获取当前页面html的名字
         var htmlName = "index"; //默认加载index.js
-        var pathname = location.pathname;
-        htmlName = pathname == "/" ? htmlName : pathname.split("/").pop().split(".").shift();
+        var pathname = location.pathname.split("/").pop().split(".").shift();
+        htmlName = pathname == "" ? htmlName : pathname;
         //判断是否存在对应模块
+        console.log(htmlName);
         if (String(REQUIRY_CONFIG.paths[htmlName]) == "undefined") {
             console.log("不存在对应的js模板,模板名字要和html名字一致");
         } else {
