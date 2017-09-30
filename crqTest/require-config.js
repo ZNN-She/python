@@ -47,10 +47,12 @@ var REQUIRY_CONFIG = {
         /* other*/
         "baidu": "https://hm.baidu.com/hm.js?96911eef4698192a43f328da2787bfe0"
     },
-    shim: {
+    map: {
         "*": {
-            deps: ["jquery"]
-        },
+            "js": ["jquery"]
+        }
+    },
+    shim: {
         "restClient": {
             deps: ["winAlert", "bootstrapExtend"]
         }
