@@ -3496,7 +3496,7 @@ table th[class*="col-"] {
   position: relative; }
 
 .header .header_inner .header_nav .header_nav_inner .header_nav_bar > ul > li .new_icon {
-  background-image: url("/image/new_action_icon.png");
+  background-image: url("../image/new_action_icon.png");
   position: absolute;
   height: 50px;
   width: 100px;
