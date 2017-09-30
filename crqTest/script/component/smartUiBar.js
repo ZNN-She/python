@@ -1,7 +1,7 @@
 /**
  * Created by SNAKE on 2017/9/7.
  */
-define([jquery],function ($) {
+define(["jquery"],function ($) {
     // 获取生成模板
     function getTemplate() {
         var dtd = $.Deferred();
