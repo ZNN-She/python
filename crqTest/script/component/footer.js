@@ -1,7 +1,7 @@
 /**
  * Created by SNAKE on 2017/9/6.
  */
-define([],function(){
+define(["jquery"],function($){
     // 获取生成模板
     function getTemplate() {
         return $.get("./view/component/footer.html", function(template) {

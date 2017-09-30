@@ -1,7 +1,7 @@
 /**
  * Created by SNAKE on 2017/7/3.
  */
-define([], function () {
+define(["jquery"], function ($) {
     var $headerLiEle = $(".header .header_nav .header_nav_bar>ul>li");
     var $headerAEle = $(".header .header_nav .header_nav_bar>ul>li>a");
     var href = window.location.href;

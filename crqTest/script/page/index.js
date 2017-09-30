@@ -1,4 +1,4 @@
-define(["restClient", "Vue", "commonDataService", "winAlert"], function (restClient, Vue, commonDataService, winAlert) {
+define(["restClient", "Vue", "commonDataService", "winAlert","jquery"], function (restClient, Vue, commonDataService, winAlert, $) {
     new Vue({
         el: "#home_page",
         data: {
