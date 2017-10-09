@@ -28,7 +28,8 @@ html {
 img {
   max-width: 100%; }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   min-width: 320px;
@@ -37,7 +38,7 @@ body, html {
 body {
   font-size: 14px;
   overflow-x: hidden;
-  font-family: microsoft yahei,Arial, Helvetica, sans-serif;
+  font-family: microsoft yahei, Arial, Helvetica, sans-serif;
   /*background-color:#edf1f5;*/ }
 
 img {
@@ -53,8 +54,7 @@ a {
   background: transparent;
   text-decoration: none;
   padding: 0;
-  margin: 0;
-  color: #999; }
+  margin: 0; }
 
 a:hover {
   color: #00a7e6; }
@@ -247,7 +247,8 @@ dl {
   padding: 0;
   font-weight: normal; }
 
-em, i {
+em,
+i {
   font-style: normal; }
 
 input[type="text"] {
@@ -278,7 +279,10 @@ textarea:-webkit-autofill,
 select:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px white inset; }
 
-input[type=email]:focus, input[type=text]:focus, input[type=password]:focus, textarea:focus {
+input[type=email]:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus {
   -webkit-box-shadow: 0 0 0 1000px white inset; }
 
 /**

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>特面布局</title>
+    <style>
+    body {
+        margin: 0;
+        min-height: 100%;
+        background: #d0d;
+    }
+
+    body>.frame {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        min-width: 1200px;
+        padding: 60px 0px 30px 0px;
+        box-sizing: border-box;
+        background: #dd0;
+    }
+
+    body>.frame>.header {
+        position: absolute;
+        height: 60px;
+        width: 100%;
+        top: 0px;
+        background: #ddd;
+    }
+
+    body>.frame>.body {
+        min-height: 100%;
+        padding: 0px 15px;
+        box-sizing: border-box;
+        background: #ccc;
+    }
+
+    body>.frame>.footer {
+        height: 30px;
+        width: 100%;
+        bottom: 0px;
+        background: #bbb;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="header">
+            <a href="/">返回首页</a>
+        </div>
+        <div class="body">
+            <span>样式</span>
+            <div>
+                body {
+                <br>margin: 0;
+                <br>min-height: 100%;
+                <br>background: #d0d;
+                <br>}
+                <br> body>.frame {
+                <br>position: absolute;
+                <br>height: 100%;
+                <br>width: 100%;
+                <br>min-width: 1200px;
+                <br>box-sizing: border-box;
+                <br>padding: 60px 0px 30px 0px; //header和footer的高度
+                <br>background: #dd0;
+                <br>}
+                <br> body>.frame>.header {
+                <br>position: absolute;
+                <br>height: 60px;
+                <br>width: 100%;
+                <br>top: 0px;
+                <br>background: #ddd;
+                <br>}
+                <br> body>.frame>.body {
+                <br>min-height: 100%;
+                <br>padding: 0px 15px;
+                <br> box-sizing: border-box;
+                <br> background: #ccc;
+                <br>}
+                <br> body>.frame>.footer {
+                <br>height: 30px;
+                <br>width: 100%;
+                <br>bottom: 0px;
+                <br>background: #bbb;
+                <br>}
+            </div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>

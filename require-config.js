@@ -1,18 +1,18 @@
 //config配置
 var REQUIRY_CONFIG = {
-    baseUrl: "./script/",
+    baseUrl: "/script/",
     paths: {
         /* lib */
-        "jquery": "../lib/jquery/dist/jquery",
-        "bootstrap": "../lib/jquery/dist/js/bootstrap",
-        "Vue": "../lib/vue/dist/vue",
+        "jquery": "/lib/jquery/dist/jquery",
+        "bootstrap": "/lib/jquery/dist/js/bootstrap",
+        "Vue": "/lib/vue/dist/vue",
 
         /* project common */
-        "alert": "../common/alert/alert",
-        "confirm": "../common/confirm/confirm",
-        "modal": "../common/modal/modal-0.1.0",
-        "loading": "../common/loading/loading-0.1.0",
-        "pagination": "../common/pagination/jquery.pagination",
+        "alert": "/common/alert/alert",
+        "confirm": "/common/confirm/confirm",
+        "modal": "/common/modal/modal-0.1.0",
+        "loading": "/common/loading/loading-0.1.0",
+        "pagination": "/common/pagination/jquery.pagination",
 
         /* script common */
         "$tool": "common/tool",
@@ -25,7 +25,8 @@ var REQUIRY_CONFIG = {
         "smartUiBar": "component/smartUiBar",
 
         /* page */
-        "index": "page/index"
+        "index": "page/index",
+        "testLoading": "page/testLoading"
     },
     shim: {
         "$http": {
