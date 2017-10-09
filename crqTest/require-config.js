@@ -1,6 +1,6 @@
 //config配置
 var REQUIRY_CONFIG = {
-    baseUrl: "./script/",
+    baseUrl: "/python/crqTest/script/",
     waitSeconds: 0,
     paths: {
         /* lib */
