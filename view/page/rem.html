@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <meta charset="UTF-8" />
+    <title>
+        rem
+    </title>
+    <style>
+    .div1 {
+        width: 1rem;
+        height: 2rem;
+        text-align: center;
+        background: red;
+    }
+
+    .div1-text {
+        font-size: 0.16rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+    </div>
+    <p class="div1-text">宽：1rem</p>
+    <p class="div1-text">高：2rem</p>
+    <p class="div1-text">750下相当于宽100px;高200px;</p>
+    <p class="div1-text">实际宽高= 屏幕宽高 / 750 * 100</p>
+    <p class="div1-text">注意字体大小会随屏幕大小变化而变，750下是16px</p>
+    <script>
+    (function() {
+        //计算html的font-size 写在html里面 如果加载js会出现闪的情况
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    })();
+    </script>
+</body>
+
+</html>
